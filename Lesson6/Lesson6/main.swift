@@ -107,7 +107,7 @@ print(stackOfString.items)
 //func SumeFunction<T: SomeClass, U: SomeProtocol> () {
 //}
 
-
+  
 func findIndexInt(ofInt valueToFind: Int, in array: [Int]) -> Int? {
     for (index, value) in array.enumerated() {
         if value == valueToFind {
