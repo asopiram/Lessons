@@ -17,7 +17,7 @@ class LoginFormController: UIViewController {
     
     @IBOutlet weak var loginInput: UITextField!
     
-    @IBOutlet weak var scrollView: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var passwordInput: UITextField!
     
@@ -48,7 +48,9 @@ class LoginFormController: UIViewController {
     
     }
         //Когда клавиатура исчезает
-    @objc func keyboardWillBeHidden(notification: Notification) { // Устанавливаем отступ внизу UIScrollView, равный 0 let contentInsets = UIEdgeInsets.zero scrollView?.contentInset = contentInsets
+    @objc func keyboardWillBeHidden(notification: Notification) { // Устанавливаем отступ внизу UIScrollView, равный 0
+        let contentInsets = UIEdgeInsets.zero
+        scrollView?.contentInset = contentInsets
     }
     
     override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)// Подписываемся на два уведомления: одно приходит при появлении клавиатуры
